@@ -1,0 +1,16 @@
+### Questions:
+After you have written your code, run the code several times, and answer the following questions in a text document:
+1. Do you always get the same value when you run your program?
+    No
+2. Why might your answer to number 1 be the case?  You may want to talk about the number of threads your computer can run (remember that VMs can usually only run a single thread).
+    A race condition occurs when two or more threads can access shared data and they try to change it at the same time. The racer.c
+    have 2 threads try to access/change the global variable 'a' at the same time resulting race Condition. Computer manages many processes at the same time
+    without resulting race condition by using synchronization.
+
+3. The *critical section* of a threaded function is any part of the function that modifies global/shared memory.  What lines of code correspond to the critical section in both of your threaded functions?
+  // double the global value 1000000 times
+  for (; i < 1000000; i++)
+    a *= 2;
+ // increment the global value 1000000
+  for (; i < 1000000; i++)
+    a++;
