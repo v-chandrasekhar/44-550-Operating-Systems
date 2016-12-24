@@ -1,0 +1,15 @@
+* Run your program a few times.  What do you notice about the PIDs that are output?
+  In each run PIDs are different.
+
+
+* What do you notice about the number that is output to the screen?  What does this tell you about the memory for processes?
+  Is it shared? separate? something completely different?
+  The parent process pid and the child process pid numbers are in the sequence. The parent process and the child process PIDs are
+  different. The memory is shared between the processes the global variable value is same for both processes.
+
+
+* You may notice that, even if you srand() with time(NULL), both processes are adding the same value to the global integer.
+How could you make it so the random number generators aren't synced up? (remember that time(NULL)) only has second resolution.
+What else could you pass to srand that will be unique to each Process.  Some kind of IDentifying number, perhaps...
+
+   Different seed will get you a different value
